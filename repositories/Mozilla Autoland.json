@@ -1,0 +1,428 @@
+{
+  "node": "5ed738467221b4be29f252c8588e5a645af124bf",
+  "changeset_count": 445157,
+  "changesets": [
+    {
+      "node": "5ed738467221b4be29f252c8588e5a645af124bf",
+      "date": [
+        1541685243.0,
+        0
+      ],
+      "desc": "No Bug, mozilla-central repo-update HSTS HPKP blocklist remote-settings tld-suffixes - a=repo-update r=RyanVM\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11314",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "ffxbld <ffxbld@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "8735038d615f99a6a9fe4fa44d26be3b6b6bb727"
+      ],
+      "pushid": 72598,
+      "pushdate": [
+        1541685286,
+        0
+      ]
+    },
+    {
+      "node": "8735038d615f99a6a9fe4fa44d26be3b6b6bb727",
+      "date": [
+        1541684039.0,
+        0
+      ],
+      "desc": "Bug 1505213 - Allow ::slotted()::placeholder. r=heycam\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11132",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+      "phase": "draft",
+      "parents": [
+        "c359697043078fa233fd45d044263fe6db5eeb3d"
+      ],
+      "pushid": 72597,
+      "pushdate": [
+        1541684134,
+        0
+      ]
+    },
+    {
+      "node": "c359697043078fa233fd45d044263fe6db5eeb3d",
+      "date": [
+        1541682883.0,
+        0
+      ],
+      "desc": "bug 1505752 - fix whitespace trim of Timing-Allow-Origin header value r=dragana\n\nStripWhitespace() is not suitable for HTTP whitespace trimming.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11317",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Daniel Stenberg <daniel@haxx.se>",
+      "phase": "draft",
+      "parents": [
+        "2c1b00a6a97f90dea740c046759698bed3a4c6fe"
+      ],
+      "pushid": 72596,
+      "pushdate": [
+        1541682978,
+        0
+      ]
+    },
+    {
+      "node": "2c1b00a6a97f90dea740c046759698bed3a4c6fe",
+      "date": [
+        1541682700.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: increase TimedPromise timeout on debug; r=whimboo\n\nThe things that rely on TimedPromise, such as awaiting a sizemodechange\nevent on exiting fullscreen, takes a lot longer to perform in Asan\nand debug builds than in optimised builds.\n\nThis patch increases the TimedPromise timeout duration by three\ntimes in debug builds, which is the same amount WPT uses.\n\nDepends on D10569\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11189",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "a4fcddffde4140fc2c0597055ae216eed4c795fd"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "a4fcddffde4140fc2c0597055ae216eed4c795fd",
+      "date": [
+        1541682698.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: drop broken window maximization test; r=automatedtester\n\nThis test is duplicated by WPT tests.\n\nDepends on D10568\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10569",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "81ac8f7d11b1d003d1a64ad94bfef4cb49553f91"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "81ac8f7d11b1d003d1a64ad94bfef4cb49553f91",
+      "date": [
+        1541682691.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: restore from maximized before setting rect; r=whimboo\n\nOn certain window manager configurations a window may be resized\nto fit the full available dimensions of the screen without going\ninto the maximised state.  Similarily, a maximised window may be\nthe exact dimensions of the screen.\n\nIf the window outerWidth/outerHeight is 800x600 and in maximised\nstate, resizing it to 800x600 through WebDriver:SetWindowRect will\nnot work because the window has already reached its requested dimensions.\n\nThis patch ensures to wait for the resizeEnd event when the window\nstate is not normal.\n\nDepends on D8419\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10568",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "05b349eaba5481fc81f443be601e612303abe85b"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "05b349eaba5481fc81f443be601e612303abe85b",
+      "date": [
+        1541682688.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: empty event queue on window manipulation; r=automatedtester,whimboo\n\nThis requests an animation frame off ChromeWindow and waits for\nthe main thread's event queue to become idle in relation to window\nmanipulation commands.\n\nIt additionally clears the event queue before resizing, because\nthis is a particularly hazardous operation.  We don't know the\nexact science as to why this is needed, so it may just be that this\nintroduces enough latency for the operation to complete successfully.\nFile this under \"secret sauce\".\n\nThis ensures all potential synchronisation code between e.g. the\nparent process and the child processes have had time to run before\nwe return from WebDriver:{MinimizeWindow,MaximizeWindow,FullscreenWindow}.\n\nDepends on D8418\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8419",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "2aaa43050c7a659111129a094f5043349ef2bd82"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "2aaa43050c7a659111129a094f5043349ef2bd82",
+      "date": [
+        1541682686.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: wait for last event on resizing window; r=automatedtester,whimboo\n\nMy delegating to the main thread, waiting for the last DOM resize event\nto fire, and requesting an animation frame from the ChromeWindow, we\ncan ensure the window is (more) synchronously resized.  This ensures\nbetter reliability when setting a window's dimensions.\n\nAll this means we can get rid of the heuristics we use for \"waiting\nfor a window resize\" to occur by checking if the outerWidth/outerHeight\nhas changed.  These were obviously bug ridden.\n\nDepends on D8417\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8418",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "95700d2eb9c5b1487e207052517d76b859300fa7"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "95700d2eb9c5b1487e207052517d76b859300fa7",
+      "date": [
+        1541682684.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: make window positioning idempotent; r=whimboo\n\nWhen the ChromeWindow is already in the desired x/y position,\nWebDriver:SetWindowRect should act as a no-op.  This avoids a\nsuperfluous call to ChromeWindow.moveTo.\n\nDepends on D8416\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8417",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "15b378cd5a244a6fd585548c89a30e56171221a7"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "15b378cd5a244a6fd585548c89a30e56171221a7",
+      "date": [
+        1541682682.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: fix buggy window state comparison; r=whimboo\n\nwin.Maximized does not exist.  This should be WindowState.Maximized.\n\nDepends on D8415\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8416",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "1d9d159a04b7b063b9de2c2fdb37b9d5a7b2758f"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "1d9d159a04b7b063b9de2c2fdb37b9d5a7b2758f",
+      "date": [
+        1541682680.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: accept sizemodechange may not always fire; r=automatedtester,whimboo\n\nUnlike the visibilitychange event, sizemodechange appears to fire in a\nmostly reliable way.  However, in the off-chance that sizemodechange\nshould not fire, we need an escape path so that Marionette returns\nwithin a timely fashion.\n\nDepends on D8414\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8415",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "f1b2efff0c4448464b7f7a39de783a1d4b29b3f0"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "f1b2efff0c4448464b7f7a39de783a1d4b29b3f0",
+      "date": [
+        1541682678.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: bail if visibilitychange does not fire on minimization; r=whimboo\n\nThe visibilitychange DOM event does not fire reliably in all\nconfigurations when retrieved from web content.  It appears to fire more\nreliably in chrome, but to ensure a call to WebDriver:MinimizeWindow\nnever hangs, we additionally change it to be a TimedPromise.\n\nThere is an assumption here that if the iconification process does\nnot complete within this duration, there is nothing we can do.\n\nDepends on D8413\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8414",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "33fd5380d4bc1fee23fc56cd3b6ea8c4f5726d96"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "33fd5380d4bc1fee23fc56cd3b6ea8c4f5726d96",
+      "date": [
+        1541682676.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: poll on restoring window; r=whimboo\n\nInstead of waiting for the visibilitychange event to fire, which does\nnot work in headless mode, we can poll ChromeWindow.windowState which\nappears to be a more reliable way of telling the window's current state.\n\nThis will resolve the problem where Marionette never returns from\nrestoration due to visibilitychange never firing, and will additionally\nmake it more reliable.\n\nDepends on D8412\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8413",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "1cceee950d62ca8800b66a90815d50cb25b3f7dc"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "1cceee950d62ca8800b66a90815d50cb25b3f7dc",
+      "date": [
+        1541682674.0,
+        0
+      ],
+      "desc": "bug 1492499: marionette: add debounce sync primitive; r=automatedtester\n\nThis adds a new synchronisation primitive to Marionette which will\nallow us to wait for the last in a sequence of events to fire.\nThis is especially useful for high-frequency events such as the DOM\nresize event, where multiple resize events may fire as the window\ndimensions are being changed.\n\nDepends on D8411\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8412",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "8490a7301d9270bd4cf4e25ac871136152f172ab"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "8490a7301d9270bd4cf4e25ac871136152f172ab",
+      "date": [
+        1541682666.0,
+        0
+      ],
+      "desc": "bug 1492499: webdriver: add stress tests for window manipulation; r=automatedtester\n\nDepends on D8410\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8411",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "83ee1c23d31a360c315487d25bc648bc80404682"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "83ee1c23d31a360c315487d25bc648bc80404682",
+      "date": [
+        1541682664.0,
+        0
+      ],
+      "desc": "bug 1492499: webdriver: take 22px window border into account on maximizing; r=automatedtester,whimboo\n\nOn some systems and window managers, such as macOS and when X11\nforwarding an application across systems, there exists a 22px\nwindow border that we cannot detect or do anything about.  As this\ntest is to verify that the width/height changed beyond 800x600,\nthis assertion change should make the tests pass on more configurations.\n\nDepends on D8409\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8410",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Andreas Tolfsen <ato@sny.no>",
+      "phase": "draft",
+      "parents": [
+        "5c9b98dcb14863a832ffd2ebebb65bdc12db867b"
+      ],
+      "pushid": 72595,
+      "pushdate": [
+        1541682791,
+        0
+      ]
+    },
+    {
+      "node": "5c9b98dcb14863a832ffd2ebebb65bdc12db867b",
+      "date": [
+        1541681800.0,
+        -7200
+      ],
+      "desc": "Backed out changeset 60659171e414 (bug 1498246) for geckoview bustages CLOSED TREE",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "shindli <shindli@mozilla.com>",
+      "phase": "draft",
+      "parents": [
+        "15bffbe82ec64775a9adffb71b218c691ffee308"
+      ],
+      "pushid": 72594,
+      "pushdate": [
+        1541681818,
+        0
+      ]
+    },
+    {
+      "node": "15bffbe82ec64775a9adffb71b218c691ffee308",
+      "date": [
+        1541680421.0,
+        0
+      ],
+      "desc": "Bug 1482150 - Create a unit test to verify all corner cases of the helper method. r=padenot\n\nQuering the stored devices list for an ID was not always correct. The stored devices list is expected to be empty before an enumeration takes place or after a collection change notification. In those cases, the method will fail to find an existing ID. The method has been updated to address these cases in previous patch. Here I have implemented a unit test to verify the case. Currently, the method is not being used.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D9380",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Alex Chronopoulos <achronop@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "79ffde86ea1f8bf5e8ccd4ddb8063091b59c3d8e"
+      ],
+      "pushid": 72593,
+      "pushdate": [
+        1541681190,
+        0
+      ]
+    },
+    {
+      "node": "79ffde86ea1f8bf5e8ccd4ddb8063091b59c3d8e",
+      "date": [
+        1541680413.0,
+        0
+      ],
+      "desc": "Bug 1482150 - Implement enumeration of output devices. r=padenot\n\nDifferential Revision: https://phabricator.services.mozilla.com/D7605",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Alex Chronopoulos <achronop@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "8a075dabb0c5ea6512231f2f35c52e2d16fcfb30"
+      ],
+      "pushid": 72593,
+      "pushdate": [
+        1541681190,
+        0
+      ]
+    },
+    {
+      "node": "8a075dabb0c5ea6512231f2f35c52e2d16fcfb30",
+      "date": [
+        1541680406.0,
+        0
+      ],
+      "desc": "Bug 1482150 - Make CubebDeviceEnumerator singleton. r=padenot\n\nDifferential Revision: https://phabricator.services.mozilla.com/D7604",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Alex Chronopoulos <achronop@gmail.com>",
+      "phase": "draft",
+      "parents": [
+        "22d08a6ea7cc9c44390357d0e2ad93cf240ca23c"
+      ],
+      "pushid": 72593,
+      "pushdate": [
+        1541681190,
+        0
+      ]
+    }
+  ]
+}

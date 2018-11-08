@@ -1,0 +1,428 @@
+{
+  "node": "2c5e3025ca5be0d218c391d07aed9ff0503d5c7b",
+  "changeset_count": 498407,
+  "changesets": [
+    {
+      "node": "2c5e3025ca5be0d218c391d07aed9ff0503d5c7b",
+      "date": [
+        1541685618.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\ncak -> e083dcc69d2f\nlij -> a8f724ab11a8\nmai -> d8b3d87fcb1f\nms -> 52eccf862d08\nnb-NO -> 2d5ba93b1c8d\nro -> 5a514dcb2647\nsv-SE -> 88ac465c8064\ntr -> e168b5772144\nzh-CN -> e01da5d3c6d5\nzh-TW -> 0ee237466a9e",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [
+        "tip"
+      ],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "f67450c53f27d6efddc1f9f56ee255613c3e43c2"
+      ],
+      "pushid": 10140,
+      "pushdate": [
+        1541685623,
+        0
+      ]
+    },
+    {
+      "node": "f67450c53f27d6efddc1f9f56ee255613c3e43c2",
+      "date": [
+        1541685613.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\ncak -> e083dcc69d2f\nmai -> d8b3d87fcb1f\nms -> f429f974ed88\nro -> 5a514dcb2647\nsl -> 592dd7ca895c\nsv-SE -> 17a2bc13150f\nzh-CN -> a055a06832ec\nzh-TW -> e92578c931c3",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "3f6ec28355dc1fd52b1153a170ceb9308679aa5c"
+      ],
+      "pushid": 10140,
+      "pushdate": [
+        1541685623,
+        0
+      ]
+    },
+    {
+      "node": "3f6ec28355dc1fd52b1153a170ceb9308679aa5c",
+      "date": [
+        1541682020.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nkm -> 58046483734d\nko -> 4aa22ca169b8\nlij -> e55b3ded4460\nlt -> 6838fe4542b4\nlv -> 6cee7fe558a7\nmai -> af28f5c53017\nmk -> 9475cc4e966e\nml -> 8cf583fee496\nmr -> ed7077a6a7f8\nms -> a3852e1ee380\nmy -> b7099d8e418f\nnb-NO -> 90e289da7260\nne-NP -> deb682b11d16\nnl -> ee0716eb2674\nnn-NO -> 8b8d71dfa59b\noc -> 5db1a9dd95cf\nor -> cc9caa5ed714\npa-IN -> 016bbb6787ac\npl -> 2948d2f7057d\npt-BR -> a9bee361ef48\npt-PT -> 9ccbf99ccff9\nrm -> 20a753d3f66b\nro -> 4a9e84a82c8a\nru -> e8d3e4756671\nsi -> 249453377f99\nsk -> 2ebd749fce0c\nsl -> 35ab0a36edbf\nson -> 8e12efa4491d\nsq -> 3fbdde6014ed\nsr -> d4b8c141600e\nsv-SE -> ad16f5016901\nta -> 7110b894b8b6\nte -> 1fc79323f535\nth -> bdb28bf54bb8\ntr -> 8ec3325e14e7\nuk -> ea527a8f9708\nur -> 4ab9205b7a1a\nuz -> 87bb8d3dcf69\nvi -> aacfc9d519ab\nxh -> b8a1bfb07c6a",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "2ecf5c18a85ca4388931b86294d0a9dc4dda3b1b"
+      ],
+      "pushid": 10139,
+      "pushdate": [
+        1541682025,
+        0
+      ]
+    },
+    {
+      "node": "2ecf5c18a85ca4388931b86294d0a9dc4dda3b1b",
+      "date": [
+        1541682015.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\nkn -> 02226c531652\nko -> 4aa22ca169b8\nlij -> e55b3ded4460\nlo -> 8d1a4294c1d7\nlt -> 6838fe4542b4\nlv -> 6cee7fe558a7\nmai -> af28f5c53017\nml -> 8cf583fee496\nmr -> ed7077a6a7f8\nms -> a3852e1ee380\nmy -> b7099d8e418f\nnb-NO -> 90e289da7260\nne-NP -> deb682b11d16\nnn-NO -> 8b8d71dfa59b\noc -> 5db1a9dd95cf\nor -> cc9caa5ed714\npa-IN -> 016bbb6787ac\npt-BR -> a9bee361ef48\npt-PT -> 9ccbf99ccff9\nrm -> 20a753d3f66b\nro -> 4a9e84a82c8a\nru -> e8d3e4756671\nsk -> 2ebd749fce0c\nsl -> 35ab0a36edbf\nson -> 8e12efa4491d\nsq -> 3fbdde6014ed\nsr -> d4b8c141600e\nsv-SE -> ad16f5016901\nta -> 7110b894b8b6\nte -> 1fc79323f535\nth -> bdb28bf54bb8\ntr -> 8ec3325e14e7\ntrs -> bc35da09dff1\nuk -> ea527a8f9708\nur -> 4ab9205b7a1a\nuz -> 87bb8d3dcf69\nvi -> aacfc9d519ab\nwo -> e60dd6bd7d87\nxh -> b8a1bfb07c6a\nzam -> 0aa29e6d85ac",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "c329b2c093c0ff455a89a5909d577d5f389b20f4"
+      ],
+      "pushid": 10139,
+      "pushdate": [
+        1541682025,
+        0
+      ]
+    },
+    {
+      "node": "c329b2c093c0ff455a89a5909d577d5f389b20f4",
+      "date": [
+        1541624598.0,
+        0
+      ],
+      "desc": "Bug 1505520 - Back out bug 1478455. r=xidorn a=jcristau\n\nIt breaks websites.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11232",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Emilio Cobos \u00c1lvarez <emilio@crisal.io>",
+      "phase": "public",
+      "parents": [
+        "f73495a359977fab71404c1046c5a832d8286ce4"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "f73495a359977fab71404c1046c5a832d8286ce4",
+      "date": [
+        1541513293.0,
+        0
+      ],
+      "desc": "Bug 1505024 - Disable codeMirror search addon in JsTerm; r=Honza a=jcristau\n\nThis patches fixes a bug where hitting Cmd+F while\nthe filter input of the console was focused was\ntriggering codeMirror search addon, displaying the\nsearch UI *in* JsTerm.\nTo prevent this, we add the ability for any consumer\nof the Editor component to disable the search addon.\nIn the editor, in such case, we simply don't initialize\nthe event listeners that activate the search addon.\nA test case is added to ensure we don't regress this.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D11037",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Nicolas Chevobbe <nchevobbe@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "aaa628592fed21ccbad82fd5368268b58d41f2c3"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "aaa628592fed21ccbad82fd5368268b58d41f2c3",
+      "date": [
+        1541542056.0,
+        0
+      ],
+      "desc": "Bug 1503572 - Enable SSL_CERT_VERIFICATION_ERRORS histogram on release. r=janerik a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10875",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Johann Hofmann <jhofmann@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "e578f064314f15077162d153fa1f7c1f84309e37"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "e578f064314f15077162d153fa1f7c1f84309e37",
+      "date": [
+        1541437783.0,
+        0
+      ],
+      "desc": "Bug 1499415 - Check mExtensionPermissionsHelper for null before using it; r=sdaswani a=jcristau\n\n`mExtensionPermissionsHelper` is initialized in BrowserApp's onCreate() and\nnullified in it's onDestroy().\nGeckoApp's onCreate() can finish after BrowserApp's onDestroy() because it uses\nbackground initialization.\n`mExtensionPermissionsHelper` will be checked for null before using it and\nif null it's safe to ignore it's method's results as it only can be null if the\napp was already closed.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10910",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Petru Lingurar <petru.lingurar@softvision.ro>",
+      "phase": "public",
+      "parents": [
+        "cd20a71aba8a9f29804c3a848cd12c75750626a7"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "cd20a71aba8a9f29804c3a848cd12c75750626a7",
+      "date": [
+        1541543460.0,
+        0
+      ],
+      "desc": "Bug 1499169 - Split MIME type of nsObjectLoadingContent when retreived from tag; r=bzbarsky a=jcristau\n\nMIME type should be trimmed of parameters whenever it is retreived\nfrom the tag it relates to, otherwise other checks may fail.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10803",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Kyle Machulis <kyle@nonpolynomial.com>",
+      "phase": "public",
+      "parents": [
+        "410f4e7ae2feb52dc23db8892829e1b767477849"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "410f4e7ae2feb52dc23db8892829e1b767477849",
+      "date": [
+        1541478900.0,
+        0
+      ],
+      "desc": "Bug 1498233 - Stub out getBrowserForOuterWindowID for GeckoViewTab. r=jchen a=jcristau\n\nGeckoViewTab stubs out gBrowser on the root window for WebExtension compatibility.\nLoginManagerParent also looks for gBrowser on windows that are handling username\nand password form fills, and expects it to implement getBrowserForOuterWindowID.\n\nThis patch makes the stub implement getBrowserForOuterWindowID, which just returns\nthe lone GeckoViewTab browser.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10750",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mike Conley <mconley@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "24ac9d53d202349388e7d35b5bf1934aa76fdc72"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "24ac9d53d202349388e7d35b5bf1934aa76fdc72",
+      "date": [
+        1541464393.0,
+        0
+      ],
+      "desc": "Bug 1493711 - Enable langpack download on release and Beta r=jaws a=jcristau\n\nFix the message bar showing when the \"search\" option is selected. A value\nwas added in 597134aa665 for testing but the change handler was expecting\nno value to be set for search.\n\nDifferential Revision: https://phabricator.services.mozilla.com/D10967",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mark Striemer <mstriemer@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "8034ed187c948ad0cfea0bca8d840f5fa3c3a980"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "8034ed187c948ad0cfea0bca8d840f5fa3c3a980",
+      "date": [
+        1539873399.0,
+        0
+      ],
+      "desc": "Bug 1493711 - Pref off downloading langpacks outside of release r=jaws a=jcristau\n\nDifferential Revision: https://phabricator.services.mozilla.com/D8909",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Mark Striemer <mstriemer@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "7a1bcf3d6977e2944c6fd0c80b713e0add581848"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "7a1bcf3d6977e2944c6fd0c80b713e0add581848",
+      "date": [
+        1540478096.0,
+        -7200
+      ],
+      "desc": "Bug 1425146 - P2 - Add a test reproducing the reported issue to verify that a Cache directory without a padding file and with an old version of the database doesn't break the storage initialization; r=janv a=jcristau\n\nAn issue for missing the \"response_padding_size\" column in cache.sqlite was\nreported in bug 1425146 comment 39. This test reproduces it and is mainly to\nensure that a Cache directory which lacks a directory padding file and contains\nan old version of cache.sqlite can still be initialized successfully.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Tom Tung <shes050117@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "b82e4143ecdbf2d35811fc952738c2d7ab772f7f"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "b82e4143ecdbf2d35811fc952738c2d7ab772f7f",
+      "date": [
+        1536308910.0,
+        -7200
+      ],
+      "desc": "Bug 1425146 - P1 - Ensure the schema for the cache.sqlite is up to date beforing accessing it; r=janv a=jcristau\n\nBug 1290481 introduces the padding mechanism, but there was a corner case which\nweren't handled correctly. It created a chance to access cache database before\nacutally checking the database version and schema upgrade. If the schema of\ncache.sqlite is too old and the padding file disappear, it breaks origins\ninitialization. This patch ensure the schema is updated to the newest before\naccessing it.",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "Tom Tung <shes050117@gmail.com>",
+      "phase": "public",
+      "parents": [
+        "7bb875130d4e5c249d11c9c0cfab169071d63159"
+      ],
+      "pushid": 10138,
+      "pushdate": [
+        1541680021,
+        0
+      ]
+    },
+    {
+      "node": "7bb875130d4e5c249d11c9c0cfab169071d63159",
+      "date": [
+        1541678419.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nfy-NL -> 0bb7dbc40693\nga-IE -> f3908a1bdbe1\ngd -> fb2f90fb6c55\ngl -> d1f341097504\ngn -> 1b34bd85e970\ngu-IN -> b9e436701735\nhe -> 2089fb701e11\nhi-IN -> e3c5a66c3a31\nhr -> 70f7cc013b43\nhsb -> 779bf1ff93be\nhu -> a7696eac59a0\nhy-AM -> 39402ec448d5\nia -> a014929c8b9f\nid -> 64354ab44f7d\nis -> 58a1e1824c2b\nja -> 992f87605e0b\nja-JP-mac -> 7d0f88bb10a8\nka -> 178d06697a7e\nkab -> ab445bdeb0ab\nkk -> d651702a031d\nkn -> 02226c531652",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "fb147ae7d462437c5233ca734c572014b6190cfe"
+      ],
+      "pushid": 10137,
+      "pushdate": [
+        1541678424,
+        0
+      ]
+    },
+    {
+      "node": "fb147ae7d462437c5233ca734c572014b6190cfe",
+      "date": [
+        1541678413.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\nfy-NL -> 0bb7dbc40693\nga-IE -> f3908a1bdbe1\ngd -> fb2f90fb6c55\ngl -> d1f341097504\ngn -> 1b34bd85e970\ngu-IN -> b9e436701735\nhe -> 2089fb701e11\nhi-IN -> e3c5a66c3a31\nhr -> 70f7cc013b43\nhsb -> 779bf1ff93be\nhu -> a7696eac59a0\nhy-AM -> 39402ec448d5\nid -> 64354ab44f7d\nis -> 58a1e1824c2b\nja -> 992f87605e0b\nka -> 178d06697a7e\nkab -> ab445bdeb0ab\nkk -> d651702a031d",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "7a3bdebc496d255a4c9753158606b2c58eb047ee"
+      ],
+      "pushid": 10137,
+      "pushdate": [
+        1541678424,
+        0
+      ]
+    },
+    {
+      "node": "7a3bdebc496d255a4c9753158606b2c58eb047ee",
+      "date": [
+        1541674816.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nach -> c488e3fecb0f\naf -> fa1f20e01614\nan -> 336e061995b9\nar -> f6834a7d7374\nas -> d2c76e616a66\nast -> fcb8f3455237\naz -> c4caf3b07cf2\nbe -> 697eb1022498\nbg -> 7bf1f448f743\nbn-BD -> 5f7a87adee06\nbn-IN -> 49ce3195c4c2\nbr -> 41cf35b7c5b5\nbs -> 4a14aee27904\nca -> 9373e8ce86d4\ncak -> a40d767541ba\ncs -> 4b99defb0525\ncy -> 4c948fed2584\nda -> bb95099a3b52\nde -> 017a7e7a267a\ndsb -> aadebeccf5ba\nel -> 2d28a78dcef5\nen-CA -> 55ad9171a9f0\nen-GB -> 296422b495e9\nen-ZA -> c1b5d2128914\neo -> c68e87667d9f\nes-AR -> bff0a788c711\nes-CL -> 1d3efd2532ea\nes-ES -> 4d1feb70b0e2\nes-MX -> fceda607d0f4\net -> 58a8262a0cc7\neu -> 7cebfd46208b\nfa -> cbc040d58476\nff -> 46f5aec275ea\nfi -> 235ab13d261e\nfr -> 8ee417b64f99",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "1cd4f2d571554c4dc89cf1be1d98683c0d14f797"
+      ],
+      "pushid": 10136,
+      "pushdate": [
+        1541674822,
+        0
+      ]
+    },
+    {
+      "node": "1cd4f2d571554c4dc89cf1be1d98683c0d14f797",
+      "date": [
+        1541674811.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\nan -> 336e061995b9\nar -> f6834a7d7374\nas -> d2c76e616a66\nast -> fcb8f3455237\naz -> c4caf3b07cf2\nbe -> 697eb1022498\nbg -> 7bf1f448f743\nbn-BD -> 5f7a87adee06\nbn-IN -> 49ce3195c4c2\nbr -> 41cf35b7c5b5\nbs -> 4a14aee27904\nca -> 9373e8ce86d4\ncak -> a40d767541ba\ncs -> 4b99defb0525\ncy -> 4c948fed2584\nde -> 017a7e7a267a\ndsb -> aadebeccf5ba\nel -> 2d28a78dcef5\nen-CA -> 55ad9171a9f0\nen-GB -> 296422b495e9\nen-ZA -> c1b5d2128914\neo -> c68e87667d9f\nes-AR -> bff0a788c711\nes-CL -> 1d3efd2532ea\nes-ES -> 4d1feb70b0e2\nes-MX -> fceda607d0f4\net -> 58a8262a0cc7\neu -> 7cebfd46208b\nfa -> cbc040d58476\nff -> 46f5aec275ea\nfi -> 235ab13d261e\nfr -> 8ee417b64f99",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "9829cc4989c11d7677722b116987307ffdb2050d"
+      ],
+      "pushid": 10136,
+      "pushdate": [
+        1541674822,
+        0
+      ]
+    },
+    {
+      "node": "9829cc4989c11d7677722b116987307ffdb2050d",
+      "date": [
+        1541671220.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD\n\nfr -> c55222e5d4bb\nit -> 785a7af5a0ee\nnl -> 8e6ca74fe217\nsl -> 289a8be1604e",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "7d82ccbdff8cf957cc9d50074c7f922f545689e3"
+      ],
+      "pushid": 10135,
+      "pushdate": [
+        1541671226,
+        0
+      ]
+    },
+    {
+      "node": "7d82ccbdff8cf957cc9d50074c7f922f545689e3",
+      "date": [
+        1541671215.0,
+        28800
+      ],
+      "desc": "no bug - Bumping Fennec l10n changesets r=release a=l10n-bump DONTBUILD\n\nfr -> c55222e5d4bb\nsl -> 289a8be1604e",
+      "branch": "default",
+      "bookmarks": [],
+      "tags": [],
+      "user": "L10n Bumper Bot <release+l10nbumper@mozilla.com>",
+      "phase": "public",
+      "parents": [
+        "bf39f03ec712889ea35b15b7652b1dcb44560783"
+      ],
+      "pushid": 10135,
+      "pushdate": [
+        1541671226,
+        0
+      ]
+    }
+  ]
+}
