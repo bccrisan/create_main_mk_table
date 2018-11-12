@@ -2,7 +2,8 @@ import os, json
 from os import listdir
 from os.path import isfile, join
 from pprint import pprint
-import  datetime
+import datetime
+
 
 def hg_timestamps_handler(timestamp, timezone):
     """
@@ -25,12 +26,29 @@ def hg_timestamps_handler(timestamp, timezone):
     return datetime.utcfromtimestamp(ts).strftime("%m-%d-%Y %H:%M:%S")
 
 
+def clear_file(file_name):
+    f = open(file_name, 'w')
+    base_table = '|      Repository      |                   Last commit               |    Deploy time       | \n' + \
+                 '|:--------------------:|:-------------------------------------------:|:--------------------:| \n'
+    f.write(base_table)
+    f.close()
+
+
+def write_main_mk_table(file_name, repository, last_commit, deploy_time):
+
+    row = "|" + repository + \
+          "|" + last_commit + \
+          "|" + deploy_time + \
+          "|" + '\n'
+    write_file = open(file_name, "a")
+    write_file.write(row)
+
+
 def generate_main_mk_table():
     """
     """
 
-    base_table = '|      Repository      |                   Last commit               |    Deploy time       | \n' + \
-                 '|:--------------------:|:-------------------------------------------:|:--------------------:| \n'
+
     # data = "Something"
     # for key in data:
     #     row = "|" + commit_number + \
@@ -49,29 +67,51 @@ def generate_main_mk_table():
     json_files = [jf for jf in only_files if ".json" in jf]
     print(json_files)
 
-    # for f in json_files:
+    for f in json_files:
+        print(f)
+        file_path = "repositories/" + f
+        # read_from_json = json.load(file_path.read())
+        # print(read_from_json)
+        with open(file_path) as json_files:
+            data = json.load(json_files)
+            # pprint(data)
+            for test in data["changesets"]:
+                print(test["desc"])
+                data_comitului = test["date"][:1]
+                tdz = test["date"][1:]
+                print(str(data_comitului) + " " + str(tdz))
+                write_main_mk_table("main_mk_table.md", "test", test["desc"], "data")
+                break
+
+
+        # with open(file_path) as f:
+        #     lines = f.readlines()
+        #     print(lines)
+
+        # read_from_json = json.load(file_path)
+        # print(read_from_json)
+
+        # break
     #     json_test = json.load("repositories/" + f)
     #     pprint(json_test)
 
-    json_data = open("repositories/Mozharness.json").read()
-
-    data = json.loads(json_data)
-    pprint(data["node"])
-    for test in data["changesets"]:
-        print("Mozharness")
-        print(test["desc"])
-        data_comitului = test["date"][:1]
-        tdz = test["date"][1:]
-        print(str(data_comitului) + " " + str(tdz))
-
-        break
-
-    # Write to md file
-    md_file_name = "main_mk_table.md"
-    md_file = open(md_file_name, 'w')
-    md_file.write(base_table)
-    md_file.close()
+    # json_data = open("repositories/Mozharness.json").read()
+    #
+    # data = json.loads(json_data)
+    # pprint(data["node"])
+    # for test in data["changesets"]:
+    #     print("Mozharness")
+    #     print(test["desc"])
+    #     data_comitului = test["date"][:1]
+    #     tdz = test["date"][1:]
+    #     print(str(data_comitului) + " " + str(tdz))
+    #
+    #     break
 
 
 if __name__ == "__main__":
+    clear_file("main_mk_table.md")
     generate_main_mk_table()
+
+
+
