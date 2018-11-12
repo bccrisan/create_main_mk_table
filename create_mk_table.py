@@ -59,52 +59,26 @@ def generate_main_mk_table():
     # print(json_files)
 
     for f in json_files:
-        print(f)
+        # print(f)
         file_path = "repositories/" + f
         # read_from_json = json.load(file_path.read())
         # print(read_from_json)
         with open(file_path) as json_files:
             data = json.load(json_files)
             # pprint(data)
-            # print(f)
+            github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/repositories/"
+            repository_name = "[" + f.rstrip().replace(".json", "") + "]" + "(" + github_base_link + f + ")"
             for test in data["changesets"]:
                 commit_description = test["desc"]
                 commit_description = commit_description.rstrip('\r\n').replace('\n', '')
-                print(commit_description)
-
                 commit_date = test["date"][:1]
                 tdz = test["date"][1:]
                 test = str(commit_date).strip("[]")
                 time_designator = str(tdz).strip("[]")
                 data_push = hg_timestamps_handler(test, time_designator)
                 commit_description = str(commit_description)
-                write_main_mk_table("main_mk_table.md", "PlaceHolder", commit_description, data_push)
+                write_main_mk_table("main_mk_table.md", repository_name, commit_description, data_push)
                 break
-
-
-        # with open(file_path) as f:
-        #     lines = f.readlines()
-        #     print(lines)
-
-        # read_from_json = json.load(file_path)
-        # print(read_from_json)
-
-        # break
-    #     json_test = json.load("repositories/" + f)
-    #     pprint(json_test)
-
-    # json_data = open("repositories/Mozharness.json").read()
-    #
-    # data = json.loads(json_data)
-    # pprint(data["node"])
-    # for test in data["changesets"]:
-    #     print("Mozharness")
-    #     print(test["desc"])
-    #     data_comitului = test["date"][:1]
-    #     tdz = test["date"][1:]
-    #     print(str(data_comitului) + " " + str(tdz))
-    #
-    #     break
 
 
 if __name__ == "__main__":
