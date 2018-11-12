@@ -67,7 +67,7 @@ def generate_main_mk_table():
             data = json.load(json_files)
             # pprint(data)
             github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/repositories/"
-            repository_name = "[" + f.rstrip().replace(".json", "") + "]" + "(" + github_base_link + f + ")"
+            repository_name = "[" + f.rstrip().replace(".json", "") + "]" + "(" + github_base_link + f.rstrip().replace(" ", "%20") + ")"
             for test in data["changesets"]:
                 commit_description = test["desc"]
                 commit_description = commit_description.rstrip('\r\n').replace('\n', '')
