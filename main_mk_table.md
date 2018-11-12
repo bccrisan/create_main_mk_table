@@ -1,41 +1,16 @@
 |      Repository      |                   Last commit               |    Deploy time       | 
 |:--------------------:|:-------------------------------------------:|:--------------------:| 
-|test|quote mr versions to avoid being treated as floats|data|
-|test|Bug 1503894 - reenable taskcluster-cron for comm-central repo. r=tomprince
-
-This goes along with a .cron.yml update in comm-central that removes the
-periodic-file-update cron configuration. (Bug 1499590 comment 15)
-
-This will get comm-central nightly builds working again.
-
-Differential Revision: https://phabricator.services.mozilla.com/D10959|data|
-|test|Bug 1492665 - add modify_resources support r=Callek,bstack
-
-Differential Revision: https://phabricator.services.mozilla.com/D6933|data|
-|test|No bug - Pin mozilla-esr60 version for release. a=jorgk|data|
-|test|merge default->production; tests passing|data|
-|test|Bug 1506212 - Fix more in-content button colors. r=bgrins
-
-Differential Revision: https://phabricator.services.mozilla.com/D11555|data|
-|test|no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD
-
-it -> a2c6ba1924c3|data|
-|test|Merge inbound to mozilla-central.  a=merge|data|
-|test|Bug 1499265 - Intermittent failure in update-verify: Task timeout after 3600 seconds. Force killing container. r=aki a=tomprince
-
-Intermittent failure in update-verify: Task timeout after 3600 seconds. Force killing container
-
-Differential Revision: https://phabricator.services.mozilla.com/D8925|data|
-|test|Bug 1506391 - Manually extinguish multi-line use statements.
-|data|
-|test|Backed out changeset 7e6f51f7fca4 (bug 1470786) for causing bug 1505161; a=backout|data|
-|test|Fuzzy query=android web-pl
-
-Pushed via `mach try fuzzy`|data|
-|test|Bug 1501406 - Update vswhere to version 2.5.2.|data|
-|test|robustcheckout: reference `testedwith` in `supported_hg` assertion r=gps
-
-Now we only need to update the supported Mercurial versions in a
-single location.
-
-Differential Revision: https://phabricator.services.mozilla.com/D11197|data|
+|test|quote mr versions to avoid being treated as floats|11-03-2018 03:18:01|
+|test|Bug 1503894 - reenable taskcluster-cron for comm-central repo. r=tomprince. This goes along with a .cron.yml update in comm-central that removes the periodic-file-update cron configuration. (Bug 1499590 comment 15). This will get comm-central nightly builds working again. Differential Revision: https://phabricator.services.mozilla.com/D10959|11-06-2018 21:44:29|
+|test|Bug 1492665 - add modify_resources support r=Callek,bstack. Differential Revision: https://phabricator.services.mozilla.com/D6933|10-22-2018 17:52:14|
+|test|No bug - Pin mozilla-esr60 version for release. a=jorgk|08-15-2018 23:36:04|
+|test|merge default->production; tests passing|09-25-2018 05:29:30|
+|test|Bug 1506212 - Fix more in-content button colors. r=bgrins. Differential Revision: https://phabricator.services.mozilla.com/D11555|11-10-2018 21:28:39|
+|test|no bug - Bumping Firefox l10n changesets r=release a=l10n-bump DONTBUILD. it -> a2c6ba1924c3|11-10-2018 20:00:14|
+|test|Merge inbound to mozilla-central.  a=merge|11-10-2018 23:36:30|
+|test|Bug 1499265 - Intermittent failure in update-verify: Task timeout after 3600 seconds. Force killing container. r=aki a=tomprince. Intermittent failure in update-verify: Task timeout after 3600 seconds. Force killing container, Differential Revision: https://phabricator.services.mozilla.com/D8925|10-17-2018 22:57:58|
+|test|Bug 1506391 - Manually extinguish multi-line use statements.|11-10-2018 21:26:46|
+|test|Backed out changeset 7e6f51f7fca4 (bug 1470786) for causing bug 1505161; a=backout|11-10-2018 00:44:53|
+|test|Fuzzy query=android web-pl. Pushed via `mach try fuzzy`|11-11-2018 11:28:28|
+|test|Bug 1501406 - Update vswhere to version 2.5.2.|10-23-2018 23:12:46|
+|test|robustcheckout: reference `testedwith` in `supported_hg` assertion r=gps. Now we only need to update the supported Mercurial versions in a single location. Differential Revision: https://phabricator.services.mozilla.com/D11197|11-07-2018 18:49:04|
