@@ -2,7 +2,7 @@ import os, json
 from os import listdir
 from os.path import isfile, join
 from pprint import pprint
-import datetime
+from datetime import datetime
 
 
 def hg_timestamps_handler(timestamp, timezone):
@@ -12,7 +12,7 @@ def hg_timestamps_handler(timestamp, timezone):
     another and returns the date-time format.
     Part of Mercurial Wrapper
     Example :
-        print(handle_timestamps("1499225169.0", "-43200"))
+        print(hg_timestamps_handler("1499225169.0", "-43200"))
     Output:
         07-05-2017 15:26:09
     :param timestamp: Timestamp in unix systems (an unique time represented in how many seconds past a certain event)
@@ -48,24 +48,15 @@ def generate_main_mk_table():
     """
     """
 
-
-    # data = "Something"
-    # for key in data:
-    #     row = "|" + commit_number + \
-    #           "|" + commiter + \
-    #           "|" + message + \
-    #           "|" + "[URL](" + url + ")" + \
-    #           "|" + date + '\n'
-    #
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # Look into repositories folder and list all of the files
     only_files = [f for f in listdir(dir_path + "/repositories") if isfile(join(dir_path + "/repositories", f))]
-    print(only_files)
+    # print(only_files)
 
     # Pass filter only the ".json" objects
     json_files = [jf for jf in only_files if ".json" in jf]
-    print(json_files)
+    # print(json_files)
 
     for f in json_files:
         print(f)
@@ -75,12 +66,19 @@ def generate_main_mk_table():
         with open(file_path) as json_files:
             data = json.load(json_files)
             # pprint(data)
+            # print(f)
             for test in data["changesets"]:
-                print(test["desc"])
-                data_comitului = test["date"][:1]
+                commit_description = test["desc"]
+                commit_description = commit_description.rstrip('\r\n').replace('\n', '')
+                print(commit_description)
+
+                commit_date = test["date"][:1]
                 tdz = test["date"][1:]
-                print(str(data_comitului) + " " + str(tdz))
-                write_main_mk_table("main_mk_table.md", "test", test["desc"], "data")
+                test = str(commit_date).strip("[]")
+                time_designator = str(tdz).strip("[]")
+                data_push = hg_timestamps_handler(test, time_designator)
+                commit_description = str(commit_description)
+                write_main_mk_table("main_mk_table.md", "PlaceHolder", commit_description, data_push)
                 break
 
 
