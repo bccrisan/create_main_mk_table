@@ -1,4 +1,6 @@
 import os, json
+import re
+import time
 from os import listdir
 from os.path import isfile, join
 from datetime import datetime
@@ -86,25 +88,25 @@ def generate_main_mk_table():
             data = json.load(json_files)
             # pprint(data)
             github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/repositories/"
-            repository_name = "[" + f.rstrip().replace(".json", "") + "]" + "(" + github_base_link + f.rstrip().replace(" ", "%20") + ")"
+            repository_name = "[" + f.rstrip().replace(".json", "") + "]" + "(" + github_base_link + \
+                              f.rstrip().replace(" ", "%20") + ")"
 
             for test in data["changesets"]:
                 commit_description = test["desc"]
-                commit_description = commit_description.rstrip('\r\n').replace('\n', '')
+                replaced_commit_description = re.sub("[\n]", " ", commit_description)
                 commit_date = test["date"][:1]
                 tdz = test["date"][1:]
                 test = str(commit_date).strip("[]")
                 time_designator = str(tdz).strip("[]")
                 data_push = hg_timestamps_handler(test, time_designator)
-                commit_description = str(commit_description)
-                write_main_mk_table("main_mk_table.md", repository_name, commit_description, data_push)
+                replaced_commit_description = str(replaced_commit_description)
+                write_main_mk_table("main_mk_table.md", repository_name, replaced_commit_description, data_push)
                 # We are braking this for loop since we got the last commit.
                 break
 
 
 if __name__ == "__main__":
+    start_time = time.time()
     clear_file("main_mk_table.md")
     generate_main_mk_table()
-
-
-
+    print("--- %s seconds ---" % (time.time() - start_time))
