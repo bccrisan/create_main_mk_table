@@ -72,7 +72,7 @@ def generate_main_mk_table():
     dir_path = os.path.dirname(os.path.realpath(__file__))
 
     # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(dir_path + "/repositories") if isfile(join(dir_path + "/repositories", f))]
+    only_files = [f for f in listdir(dir_path + "/hg_files") if isfile(join(dir_path + "/hg_files", f))]
     # print(only_files)
 
     # Pass filter only the ".json" objects
@@ -81,13 +81,13 @@ def generate_main_mk_table():
 
     for f in json_files:
         # print(f)
-        file_path = "repositories/" + f
+        file_path = "hg_files/" + f
         # read_from_json = json.load(file_path.read())
         # print(read_from_json)
         with open(file_path) as json_files:
             data = json.load(json_files)
             # pprint(data)
-            github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/repositories/"
+            github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/hg_files/"
             repository_name = "[" + f.rstrip().replace(".json", "") + "]" + "(" + github_base_link + \
                               f.rstrip().replace(" ", "%20") + ")"
 
@@ -108,5 +108,5 @@ def generate_main_mk_table():
 if __name__ == "__main__":
     start_time = time.time()
     clear_file("main_mk_table.md")
-    generate_main_mk_table()
+    generate_main_mk_table() #TODO add arguments to the function that makes the function handle different repositories.
     print("--- %s seconds ---" % (time.time() - start_time))
