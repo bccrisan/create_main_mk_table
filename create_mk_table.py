@@ -4,6 +4,7 @@ import time
 from os import listdir
 from os.path import isfile, join
 from datetime import datetime
+from pprint import pprint
 
 
 def hg_timestamps_handler(timestamp, timezone):
@@ -58,9 +59,9 @@ def write_main_mk_table(file_name, repository, last_commit, deploy_time):
     write_file.write(row)
 
 
-def generate_main_mk_table():
+def extract_hg_json(json_files):
     """
-    Function that handles and generates the markdown table.
+    Function that handles and adds mercurial content into the markdown table .
     The function starts looking into the /repositories folder after json files.
     Once those are found, and stored into list and after that we get every element from the list (each element being a
     json file name at this point) and used to open that file, and grab the commit description, commit date and the
@@ -68,17 +69,6 @@ def generate_main_mk_table():
     The function also generates the github_base_link that is used as a link in the markdown table.
     :return:
     """
-
-    dir_path = os.path.dirname(os.path.realpath(__file__))
-
-    # Look into repositories folder and list all of the files
-    only_files = [f for f in listdir(dir_path + "/hg_files") if isfile(join(dir_path + "/hg_files", f))]
-    # print(only_files)
-
-    # Pass filter only the ".json" objects
-    json_files = [jf for jf in only_files if ".json" in jf]
-    # print(json_files)
-
     for f in json_files:
         # print(f)
         file_path = "hg_files/" + f
@@ -105,8 +95,53 @@ def generate_main_mk_table():
                 break
 
 
+def extract_github_data(json_files):
+    for f in json_files:
+        # print(f)
+        file_path = "git_files/" + f
+        # read_from_json = json.load(file_path.read())
+        # print(read_from_json)
+        with open(file_path) as json_files:
+            data = json.load(json_files)
+            # pprint(data)
+            github_base_link = "https://github.com/Akhliskun/firefox-infra-changelog/blob/master/git_files/"
+            repository_name = "[" + f.rstrip().replace(".json", "") + "]" + "(" + github_base_link + \
+                              f.rstrip().replace(" ", "%20") + ")"
+            for test in data["1"]:
+                print(test)
+                # commit_description = test[""]
+                # print(commit_description)
+                # replaced_commit_description = re.sub("[\n]", " ", commit_description)
+
+
+                # write_main_mk_table("main_mk_table.md", repository_name, replaced_commit_description, data_push)
+
+                # We are braking this for loop since we got the last commit.
+                # break
+
+
+def generate_main_mk_table():
+    """
+    """
+
+    dir_path = os.path.dirname(os.path.realpath(__file__))
+
+    # Look into repositories folder and list all of the files
+    # hg_only_files = [f for f in listdir(dir_path + "/hg_files") if isfile(join(dir_path + "/hg_files", f))]
+    # # print(only_files)
+    #
+    # # Pass filter only the ".json" objects
+    # hg_json_files = [jf for jf in hg_only_files if ".json" in jf]
+    # # print(json_files)
+    # extract_hg_json(hg_json_files)
+
+    git_only_files = [f for f in listdir(dir_path + "/git_files") if isfile(join(dir_path + "/git_files", f))]
+    git_json_files = [jf for jf in git_only_files if ".json" in jf]
+    extract_github_data(git_json_files)
+
+
 if __name__ == "__main__":
     start_time = time.time()
     clear_file("main_mk_table.md")
-    generate_main_mk_table() #TODO add arguments to the function that makes the function handle different repositories.
+    generate_main_mk_table()
     print("--- %s seconds ---" % (time.time() - start_time))
